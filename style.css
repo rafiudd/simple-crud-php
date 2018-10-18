@@ -1,0 +1,17 @@
+.tabel{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabel th{
+  color: white;
+  background-color: green;
+  border: 3px solid white;
+  text-align: left;
+}
+
+.tabel td{
+  color: white;
+  background-color: green;
+  border: 3px solid white;
+}

@@ -1,18 +1,19 @@
 <html>
 <head>
   <title>Menampilkan data dari database ke dalam bentuk tabel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
   	<h2><center>DATA PESERTA</center></h2>
-  	<table class=" table table-bordered table-hovered" align="center">
+  	<table class="tabel" align="center">
   <tr>
-  	<th>id</th>
-  	<th>username</th>
-  	<th>password</th>
-  	<th>level</th>
-  	<th>fullname</th>
+  	<th>Id</th>
+  	<th>Username</th>
+  	<th>Password</th>
+  	<th>Level</th>
+  	<th>Fullname</th>
   </tr></div>
   <?php
   //  1. Lakukan include koneksi.php untuk membuat koneksi
