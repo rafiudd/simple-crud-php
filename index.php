@@ -14,6 +14,7 @@
   	<th>Password</th>
   	<th>Level</th>
   	<th>Fullname</th>
+    <th>Aksi</th>
   </tr></div>
   <?php
   //  1. Lakukan include koneksi.php untuk membuat koneksi
@@ -28,16 +29,18 @@
   // 4. Lakukan fetch dengan result type MYSQL_ASSOC
 
   while($baris_data=mysqli_fetch_array($peserta,MYSQLI_ASSOC)){
-  	echo'
+    ?>
+  	<tr>
+      <td><?php echo $baris_data['id']; ?></td>
+      <td><?php echo $baris_data['username']; ?></td>
+      <td><?php echo $baris_data['password']; ?></td>
+      <td><?php echo $baris_data['level']; ?></td>
+      <td><?php echo $baris_data['fullname']; ?></td>
+      <td>
+			<a class="edit" href="edit.php?id=<?php echo $baris_data['id']; ?>">Edit</a> |
+			<a class="hapus" href="delete.php?id=<?php echo $baris_data['id']; ?>">Hapus</a>
+		  </td>
   	</tr>
-  		<td>'.$baris_data['id'].'</td>
-  		<td>'.$baris_data['username'].'</td>
-  		<td>'.$baris_data['password'].'</td>
-  		<td>'.$baris_data['level'].'</td>
-  		<td>'.$baris_data['fullname'].'</td>
-
-  	</tr>';
-  }
-  ?>
+<?php } ?>
 </body>
 </html>
